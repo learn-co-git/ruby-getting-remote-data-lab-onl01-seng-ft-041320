@@ -9,7 +9,7 @@ require 'net/http'
     
     uri = URI.parse(url)
     
-    
+    response = Net::HTTP.get_response(uri)
 
   
 end
