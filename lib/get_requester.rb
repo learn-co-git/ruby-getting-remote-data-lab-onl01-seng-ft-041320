@@ -11,11 +11,11 @@ class GetRequester
       
     end
     
-   def get_programs
+   
     uri = URI.parse(url)
     response = Net::HTTP.get_response(uri)
     JSON.parse(response.body)
-  end
+  
   
 end
   
