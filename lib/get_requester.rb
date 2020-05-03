@@ -8,13 +8,13 @@ class GetRequester
   
     attr_accessor :uri, :url
     def initialize(url)
-      
+       uri = URI.parse(url)
+    response = Net::HTTP.get_response(uri)
+    JSON.parse(response.body)
     end
     
    
-    uri = URI.parse(url)
-    response = Net::HTTP.get_response(uri)
-    JSON.parse(response.body)
+  
   
   
 end
