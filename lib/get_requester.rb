@@ -6,7 +6,7 @@
 class GetRequester
 
   
-    attr_accessor :url
+    attr_accessor :url, :body
     
     def initialize(url)
       @url = url
@@ -15,9 +15,12 @@ class GetRequester
     def get_response_body
       zzz = URI.parse(url)
       response = Net::HTTP.get_response(zzz)
-      response.body
+      body = response.body
     end 
     
+    def parse_json
+      JSON.parse(body)
+    end 
     
     
    
