@@ -6,6 +6,11 @@ require 'net/http'
     def initialize(url)
       
     end
+    
+    uri = URI.parse(url)
+    
+    
+
   
 end
   
