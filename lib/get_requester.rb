@@ -1,4 +1,6 @@
-class GetRequester 
+class GetRequester
+  require 'open-uri'
+  
     attr_accessor :url
     def initialize(url)
       
