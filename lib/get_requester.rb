@@ -8,7 +8,7 @@ require 'json'
       
     end
     
-    uri = URI.parse(url)
+    uri = uri.parse(url)
     
     response = Net::HTTP.get_response(uri)
    JSON.parse(response.body)
