@@ -3,12 +3,12 @@ class GetRequester
 require 'net/http'
 require 'json'
   
-    attr_accessor :url
-    def initialize(url)
+    attr_accessor :uri
+    def initialize(uri)
       
     end
     
-    uri = uri.parse(url)
+    uri = URI.parse(uri)
     
     response = Net::HTTP.get_response(uri)
    JSON.parse(response.body)
