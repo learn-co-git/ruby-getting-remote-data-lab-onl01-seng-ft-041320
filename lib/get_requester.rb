@@ -6,10 +6,12 @@
 class GetRequester
 
   
-    attr_accessor :uri, :url
+    attr_accessor :url
     
-    def initialize()
+    def initialize(url)
     end
+    
+    
     
    
   
