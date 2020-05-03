@@ -6,8 +6,8 @@ require 'json'
 class GetRequester
 
   
-    attr_accessor :uri, :URL
-    def initialize(URL)
+    attr_accessor :uri, :url
+    def initialize(url)
       
     end
     
