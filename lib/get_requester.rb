@@ -9,10 +9,11 @@ class GetRequester
     attr_accessor :url
     
     def initialize(url)
+      @url = url
     end
     
     def get_response_body
-      zzz = uri.parse(url)
+      zzz = URI.parse(url)
       response = Net::HTTP.get_response(zzz)
       response.body
     end 
